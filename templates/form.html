@@ -1,0 +1,73 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2 class="text-center text-primary">Flight Price Prediction</h2>
+    
+    <form action="{{ url_for('predict') }}" method="post" class="mt-4 shadow p-4 rounded bg-light">
+        
+        {{ form.hidden_tag() }}
+
+        <div class="mb-3">
+            <label class="form-label">{{ form.airline.label }}</label>
+            {{ form.airline(class="form-control") }}
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">{{ form.date_of_journey.label }}</label>
+            {{ form.date_of_journey(class="form-control") }}
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">{{ form.source.label }}</label>
+            {{ form.source(class="form-control") }}
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">{{ form.destination.label }}</label>
+            {{ form.destination(class="form-control") }}
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">{{ form.dep_time.label }}</label>
+            {{ form.dep_time(class="form-control") }}
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">{{ form.arrival_time.label }}</label>
+            {{ form.arrival_time(class="form-control") }}
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">{{ form.duration.label }}</label>
+            {{ form.duration(class="form-control") }}
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">{{ form.total_stops.label }}</label>
+            {{ form.total_stops(class="form-control") }}
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">{{ form.no_of_passengers.label }}</label>
+            {{ form.no_of_passengers(class="form-control") }}
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">{{ form.additional_info.label }}</label>
+            {{ form.additional_info(class="form-control") }}
+        </div>
+
+        <div class="text-center">
+            {{ form.submit(class="btn btn-primary btn-lg") }}
+        </div>
+
+        {% if output %}
+        <div class="alert alert-success mt-3 text-center">
+            <strong>Predicted Price:</strong> ₹{{ output }}
+        </div>
+        {% endif %}
+        
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artic Airlines</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white">
+
+    <!-- Navbar -->
+    <nav class="flex justify-between items-center px-8 py-4 bg-gray-100 shadow-md">
+        <!-- Logo and Title -->
+        <div class="flex items-center">
+            <img src="{{ url_for('static', filename='image/logo.jpg') }}" alt="Logo" class="h-12 w-auto mr-3">
+            <h1 class="text-2xl font-bold text-gray-800">Airlines</h1>
+        </div>
+
+        <!-- Buttons aligned to the right -->
+        <div class="flex space-x-4">
+            <a href="{{ url_for('predict') }}" class="bg-blue-600 text-white py-2 px-6 rounded-md text-lg font-semibold hover:bg-blue-700 transition duration-300">
+                Predict
+            </a>
+            <a href="{{ url_for('about') }}" class="bg-gray-600 text-white py-2 px-6 rounded-md text-lg font-semibold hover:bg-gray-700 transition duration-300">
+                About
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="text-center mt-12">
+        <h2 class="text-5xl font-bold text-gray-900"> Airlines <br> Welcomes You</h2>
+
+        <!-- Plane Image -->
+        <div class="mt-6">
+            <img src="{{ url_for('static', filename='image/image.jpeg') }}" alt="Plane Image" class="mx-auto max-w-full h-auto">
+        </div>
+    </section>
+
+</body>
+</html>

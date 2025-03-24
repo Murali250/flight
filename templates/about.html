@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Airlines Project</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white">
+
+    <!-- Navbar -->
+    <nav class="flex justify-between items-center px-8 py-4 bg-gray-100 shadow-md">
+        <div class="flex items-center">
+            
+            <h1 class="text-2xl font-bold text-gray-800">Introduction</h1>
+        </div>
+
+        <!-- Navigation Links -->
+        <div class="flex space-x-4">
+            <a href="{{ url_for('predict') }}" class="bg-blue-600 text-white py-2 px-6 rounded-md text-lg font-semibold hover:bg-blue-700 transition duration-300">
+                Predict
+            </a>
+            <a href="{{ url_for('about') }}" class="bg-gray-600 text-white py-2 px-6 rounded-md text-lg font-semibold hover:bg-gray-700 transition duration-300">
+                About
+            </a>
+        </div>
+    </nav>
+
+    <!-- About Section -->
+    <section class="max-w-4xl mx-auto mt-12 p-6 bg-gray-50 shadow-lg rounded-lg">
+        <h2 class="text-3xl font-bold text-gray-900 text-center">About This Project</h2>
+        <p class="mt-4 text-gray-700 text-lg">
+            <div>
+        The goal of the flight price prediction project is to develope a model that can accurately predict  the prices of airline tickets.This project utilizes data analysis ,machine learning,and statistical modeling techniques to analyze historical flight data and make predictions on future flight  price .
+         
+            The flight price prediction project is aimed at helping travelers plan their trips more effectively .   </div> </p>
+        <p class="mt-4 text-gray-700 text-lg">
+            The system is built with **Python, Flask, and TailwindCSS** to provide a simple yet interactive user interface.
+            The project aims to help users estimate ticket prices before booking their flights.
+        </p>
+    </section>
+
+</body>
+</html>

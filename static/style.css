@@ -1,0 +1,22 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+nav {
+    background: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+button {
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #c53030;
+}

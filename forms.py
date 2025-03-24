@@ -40,7 +40,14 @@ class InputForm(FlaskForm):
         label="Departure Time",
         validators=[DataRequired()]
     )
-   
+    arrival_time = TimeField(
+        label="Arrival Time",
+        validators=[DataRequired()]
+    )
+    duration = IntegerField(
+        label="Duration",
+        validators=[DataRequired()]
+    )
     total_stops = IntegerField(
         label="Total Stops",
         validators=[DataRequired()]

@@ -1,0 +1,10 @@
+pandas 
+scikit-learn
+feature-engine
+flask
+flask-wtf
+gunicorn
+flask_sqlalchemy
+flask_bcrypt
+flask_login
+joblib
